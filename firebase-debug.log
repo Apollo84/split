@@ -1,0 +1,36 @@
+[debug] [2017-06-03T00:02:00.317Z] ----------------------------------------------------------------------
+[debug] [2017-06-03T00:02:00.319Z] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2017-06-03T00:02:00.319Z] CLI Version:  3.9.1
+[debug] [2017-06-03T00:02:00.319Z] Platform:     darwin
+[debug] [2017-06-03T00:02:00.319Z] Node Version: v6.9.1
+[debug] [2017-06-03T00:02:00.320Z] Time:         Fri Jun 02 2017 20:02:00 GMT-0400 (EDT)
+[debug] [2017-06-03T00:02:00.320Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-06-03T00:02:00.330Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-06-03T00:02:00.330Z] > authorizing via signed-in user
+[debug] [2017-06-03T00:02:00.332Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-06-03T00:02:00.332Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/r2r6lXoU4wV4JpuwPz59k3pQUJ_w1wJ2xq4Tvo99bsg',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Fri Jun 02 2017 20:02:00 GMT-0400 (EDT)
+[debug] [2017-06-03T00:02:00.504Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T00:02:00.507Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/splitico  
+ Fri Jun 02 2017 20:02:00 GMT-0400 (EDT)
+[debug] [2017-06-03T00:02:01.345Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T00:02:01.346Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/splitico/tokens  
+ Fri Jun 02 2017 20:02:01 GMT-0400 (EDT)
+[debug] [2017-06-03T00:02:01.793Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/Milan/Desktop/split'...
+[info] 
+[debug] [2017-06-03T00:02:01.796Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/splitico  
+ Fri Jun 02 2017 20:02:01 GMT-0400 (EDT)
+[debug] [2017-06-03T00:02:02.158Z] <<< HTTP RESPONSE 200
+[debug] [2017-06-03T00:02:02.158Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/952000288227/clients/_:getWebAppConfig  
+ Fri Jun 02 2017 20:02:02 GMT-0400 (EDT)
+[debug] [2017-06-03T00:02:03.552Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
