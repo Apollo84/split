@@ -19,6 +19,7 @@
 	<link href="css/nivo-lightbox.css" rel="stylesheet" />
 	<link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
 	<link href="css/custom.css" rel="stylesheet" type="text/css" />
+	<link href="css/hover.css" rel="stylesheet" type="text/css" />
 	<link href="css/animate.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
@@ -70,25 +71,27 @@
 							<p class="blue"><strong>A transparent Ethereum lottery platform that contributes to the growth of a cryptocurrency index fund.</strong></p>
 							<h3 class="changeFont white">ICO LAUNCH</h3>
 							<div id="clockdiv">
-								<div>
-									<span class="days"></span>
-									<div class="smalltext blue">DAYS</div>
-								</div>
-								<div>
-									<span class="hours"></span>
-									<div class="smalltext blue">HOURS</div>
-								</div>
-								<div>
-									<span class="minutes"></span>
-									<div class="smalltext blue">MINUTES</div>
-								</div>
-								<div>
-									<span class="seconds"></span>
-									<div class="smalltext blue">SECONDS</div>
-								</div>
+								<div id="countdown">
+								<span>
+									<span class="days clockText"></span>
+									<div class="smalltext line blue timeRefDays">DAYS</div>
+								</span>
+								<span>
+									<span class="hours clockText"></span>
+									<div class="smalltext blue line timeRefHours">HOURS</div>
+								</span>
+								<span>
+									<span class="minutes clockText"></span>
+									<div class="smalltext blue line timeRefMinutes">MINUTES</div>
+								</span>
+								<span>
+									<span class="seconds clockText"></span>
+									<div class="smalltext blue line timeRefSeconds">SECONDS</div>
+								</span>
+							</div>
 							</div>
 							<div style="margin-top:40px">
-								<a href="assets/whitepaper.pdf" target="_blank"><button class="btn btn-lg btn-primary">Download White Paper</button></a>
+								<a href="assets/whitepaper.pdf" target="_blank"><button class="btn btn-lg btn-primary hvr-float-shadow">Download White Paper</button></a>
 							</div>
 						</div>
 					</div>					
@@ -109,11 +112,15 @@
 						contributor to this coming improvement.<strong></p>
 				</div>
 				<div class="col-lg-5">
-					<img src="img/flow.png" alt="flowchart" style="width:100%; height:auto" />
+					<img src="img/flow.png" class="hvr-grow" alt="flowchart" style="width:100%; height:auto" />
+						
 				</div>
 			</div>
 		</div>
+	
 	</section>
+
+
 
 	
 	
@@ -123,7 +130,7 @@
 				<div class="col-lg-8 col-lg-offset-2 text-center">
 					<h2 class="changeFont darkblue">ROADMAP</h2>
 				</div>
-			<div class="col-lg-8 col-lg-offset-2">
+			<div class="col-lg-8 col-lg-offset-2" style="font-size:0.9em">
 				<div class="left-content">
 					<p style="color:red"><strong>APRIL 2017<br/> Technical Round Table</p>
 					<p style="color:purple">SEPTEMBER 2017<br/> Launch ICO</p>
@@ -183,7 +190,7 @@
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2 text-center">
 					<h4 class="changeFont darkblue">TOKEN SALE BONUSES</h3>
-					<img src="img/bonuses.png" alt="bonuses" style="width:70%; height:auto" />
+					<img src="img/bonuses.png" alt="bonuses" class="hvr-grow" style="width:70%; height:auto" />
 				</div>
 			</div>
 	</section>
@@ -307,7 +314,7 @@
 										Education and History. In his spare time, Milan plays video games and homebrews beer. </p>
                                     </div>
                                     <div class="s-link">
-                                        <a href="https://www.linkedin.com/in/milan-stanojevic-125b0713b/" target="blank" "><i class="fa fa-linkedin"></i></a>
+                                        <a href="https://www.linkedin.com/in/milan-stanojevic-125b0713b/" target="blank" ><i class="fa fa-linkedin"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -349,7 +356,7 @@
 								<div class="col-md-6 col-md-offset-3">
 									<form action="" method="post">
 										<input class="form-control" type="email" id="email" name="email" placeholder="Email address" required />
-										<input type="submit" id="sumbit" name="submit" class="btn btn-skin btn-lg" style="margin:0 auto; display:inherit; margin-top:25px"/>
+										<input type="submit" id="sumbit" name="submit" class="btn btn-skin btn-lg hvr-pulse" style="margin:0 auto; display:inherit; margin-top:25px"/>
 									</form>
 									</div>
 									</div>
@@ -369,7 +376,7 @@
 			<div class="row">
 				<div class="col-sm-6 col-md-6 col-lg-6">
 					<ul class="social">
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://www.facebook.com/SPLT-235101410321885/"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 					</ul>
 				
@@ -396,47 +403,67 @@
 	<script src="js/nivo-lightbox.min.js"></script>
     <script src="js/custom.js"></script>
 	<script>
-		function getTimeRemaining(endtime) {
-  var t = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor((t / 1000) % 60);
-  var minutes = Math.floor((t / 1000 / 60) % 60);
-  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-  var days = Math.floor(t / (1000 * 60 * 60 * 24));
-  return {
-    'total': t,
-    'days': days,
-    'hours': hours,
-    'minutes': minutes,
-    'seconds': seconds
-  };
-}
-
-function initializeClock(id, endtime) {
-  var clock = document.getElementById(id);
-  var daysSpan = clock.querySelector('.days');
-  var hoursSpan = clock.querySelector('.hours');
-  var minutesSpan = clock.querySelector('.minutes');
-  var secondsSpan = clock.querySelector('.seconds');
-
-  function updateClock() {
-    var t = getTimeRemaining(endtime);
-
-    daysSpan.innerHTML = t.days;
-    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
+	(function (e) {
+  e.fn.countdown = function (t, n) {
+  function i() {
+    eventDate = Date.parse(r.date) / 1e3;
+    currentDate = Math.floor(e.now() / 1e3);
+    if (eventDate <= currentDate) {
+      n.call(this);
+      clearInterval(interval)
+    }
+    seconds = eventDate - currentDate;
+    days = Math.floor(seconds / 86400);
+    seconds -= days * 60 * 60 * 24;
+    hours = Math.floor(seconds / 3600);
+    seconds -= hours * 60 * 60;
+    minutes = Math.floor(seconds / 60);
+    seconds -= minutes * 60;
+    days == 1 ? thisEl.find(".timeRefDays").text("day") : thisEl.find(".timeRefDays").text("days");
+    hours == 1 ? thisEl.find(".timeRefHours").text("hour") : thisEl.find(".timeRefHours").text("hours");
+    minutes == 1 ? thisEl.find(".timeRefMinutes").text("minute") : thisEl.find(".timeRefMinutes").text("minutes");
+    seconds == 1 ? thisEl.find(".timeRefSeconds").text("second") : thisEl.find(".timeRefSeconds").text("seconds");
+    if (r["format"] == "on") {
+      days = String(days).length >= 2 ? days : "0" + days;
+      hours = String(hours).length >= 2 ? hours : "0" + hours;
+      minutes = String(minutes).length >= 2 ? minutes : "0" + minutes;
+      seconds = String(seconds).length >= 2 ? seconds : "0" + seconds
+    }
+    if (!isNaN(eventDate)) {
+      thisEl.find(".days").text(days);
+      thisEl.find(".hours").text(hours);
+      thisEl.find(".minutes").text(minutes);
+      thisEl.find(".seconds").text(seconds)
+    } else {
+      alert("Invalid date. Example: 30 Tuesday 2013 15:50:00");
+      clearInterval(interval)
     }
   }
-
-  updateClock();
-  var timeinterval = setInterval(updateClock, 1000);
-}
-
-var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-initializeClock('clockdiv', deadline);
+  var thisEl = e(this);
+  var r = {
+    date: null,
+    format: null
+  };
+  t && e.extend(r, t);
+  i();
+  interval = setInterval(i, 1e3)
+  }
+  })(jQuery);
+  $(document).ready(function () {
+  function e() {
+    var e = new Date;
+    e.setDate(e.getDate() + 60);
+    dd = e.getDate();
+    mm = e.getMonth() + 1;
+    y = e.getFullYear();
+    futureFormattedDate = mm + "/" + dd + "/" + y;
+    return futureFormattedDate
+  }
+  $("#countdown").countdown({
+    date: "1 September 2017 09:00:00", // Change this to your desired date to countdown to
+    format: "on"
+  });
+});
 </script>
 
 <script>

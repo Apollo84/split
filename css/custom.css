@@ -19,7 +19,13 @@
 	margin:150px 0 0;
 }
 
+.line {
+	line-height:0.8em;
+}
 
+.clockText {
+	font-size:0.8em;
+}
 
 body {
     
