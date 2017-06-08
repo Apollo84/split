@@ -1,5 +1,3 @@
-<!-- php code for newsletter form -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,17 +21,14 @@
 	<link href="css/animate.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-	
-	
 	<link id="t-colors" href="color/default.css" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="js/charts.js"></script>
-
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+	
 </head>
-
-
-
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
@@ -61,7 +56,7 @@
         </div>
     </nav>
 	
-    <section id="intro" style="padding-top:120px; background-image: url('img/blue.png'); background-size:cover; height:800px">
+    <section id="intro" style="padding-top:120px; background-image: url('img/blue.png'); background-size:cover">
 		<div class="intro-content">
 			<div class="container">
 				<div class="row">
@@ -90,7 +85,7 @@
 								</span>
 							</div>
 							</div>
-							<div style="margin-top:40px">
+							<div style="margin-top:40px; margin-bottom: 80px">
 								<a href="assets/whitepaper.pdf" target="_blank"><button class="btn btn-lg btn-primary hvr-float-shadow">Download White Paper</button></a>
 							</div>
 						</div>
@@ -104,14 +99,14 @@
 		<div class="container padded" >
 			<div class="row" id="about">
 				<div class="col-lg-12">
-					<h2 class="changeFont darkblue">ABOUT</h2>
+					<h2 class="changeFont darkblue" id="aboutTitle">ABOUT</h2>
 				</div>
-				<div class="col-lg-7" style="padding-right:170px">
-					<p class="darkblue"><strong>The blockchain has great potential to disrupt and improve a vast multitude of centralized services and organizations around the world. <br/><br/>The crowd funding and 
+				<div class="col-lg-6" id="aboutP">
+					<p class="darkblue" id="aboutText"><strong>The blockchain has great potential to disrupt and improve a vast multitude of centralized services and organizations around the world. <br/><br/>The crowd funding and 
 						lottery and gaming spaces are ones that will be upended by transparent trustless DApps running on the blockchain. We believe SPL/T has the capability to be major 
 						contributor to this coming improvement.<strong></p>
 				</div>
-				<div class="col-lg-5">
+				<div class="col-lg-5 col-lg-offset-1">
 					<img src="img/flow.png" class="hvr-grow" alt="flowchart" style="width:100%; height:auto" />
 						
 				</div>
@@ -120,9 +115,6 @@
 	
 	</section>
 
-
-
-	
 	
 	<section>
 		<div class="container padded" >
@@ -148,14 +140,14 @@
 		</div>
 	</section>
 
-	<section style="background-image:url('img/blue blur.png'); background-size:cover; height:460px">
+	<section style="background-image:url('img/blue blur.png'); background-size:cover">
 		<div class="container padded" >
 			<div class="row text-center heading" id="ico">
 				<div class="col-lg-12 text-center">
 					<h2 class="changeFont white">VISION</h2>
 				</div>
-				<div class="col-lg-8 col-lg-offset-2 col-xsm-8 col-xsm-offset-2">
-					<p class="blue"><strong>We believe there is an important opportunity within the Ethereum network to create an 
+				<div class="col-lg-8 col-lg-offset-2">
+					<p class="blue" id="visionP"><strong>We believe there is an important opportunity within the Ethereum network to create an 
 						exciting and unique platform for organizations to raise funds. Harnessing the trustless 
 						power of the smart contract we will create a way for people to both have a chance to win 
 						Ether and support the causes of their choice. <br/><br/>Every organization looking to raise funds 
@@ -195,7 +187,7 @@
 			</div>
 	</section>
 
-	<section id="team" class="padded" style="background-image: url('img/gradient.png'); background-size:cover; height:1300px">
+	<section id="team" class="padded" style="background-image: url('img/gradient.png'); background-size:cover">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
@@ -203,14 +195,12 @@
 				</div>
 				<div class="col-lg-10 col-lg-offset-1 text-center">
 					<p class="blue"><strong>Bringing an idea into being is no small task. Our team has a diverse background of entrepreneurial and startup ventures. We know the difficulty of the task ahead and we thrive on it.
-						From building AI natural language processing, to securing banking transactions, to training people to survive a zombie apocalypse, we have been able to turn exciting concepts into 
+						<br/><br/>From building AI natural language processing, to securing banking transactions, to training people to survive a zombie apocalypse, we have been able to turn exciting concepts into 
 						reality through collaboration. We are united by our mission to create a useful and innovative product in one of the most exciting industries.</strong> </p>
 				</div>
 			</div>
 
 			<div class="row padded">
-                        
-
                         <div class="col-md-4 col-sm-4">
                             <div class="team-member">
                                 <div class="team-img">
@@ -224,7 +214,7 @@
 							Antonio is a talented full-stack architect who’s interest and work on AI keeps him looking over his shoulder for the terminator sent back to stop him. </p>
                                     </div>
                                     <div class="s-link">
-                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="https://www.linkedin.com/in/antonio-sou-6997b114/"><i class="fa fa-linkedin"></i></a>
                                        
                                     </div>
                                 </div>
@@ -299,9 +289,9 @@
                             </div>
                             <div class="team-title">
                                 <h4><strong>Eric Somerville</strong></h4>
-                                <span>Co-Founder</span>
-                            </div>
-                        </div>
+                                <span>Co-Founder</span><br/><br/>
+                        	</div>
+						 </div>
 						 <div class="col-md-4 col-sm-4">
                             <div class="team-member">
                                 <div class="team-img">
@@ -340,49 +330,38 @@
 		</div>
 	</section>
 
-	<section id="callaction" class="home-section paddingtop-40" style="background-image: url('img/blue.png'); background-size:cover; height:500px">	
+	<section id="callaction" class="home-section paddingtop-40" style="background-image: url('img/blue.png'); background-size:cover">	
            <div class="container">
 				<div class="row padded">
 					<div class="col-md-12">
-						<div class="">
-							<div class="row">
-								<div class="col-md-12" id="newsletter">
-									<div class="wow fadeInUp" data-wow-delay="0.1s">
-										<div class="cta-text">
-											<h3 style="text-align:center" class="changeFont white">SUBSCRIBE TO OUR NEWSLETTER</h3>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6 col-md-offset-3">
-									<form action="" method="post">
-										<input class="form-control" type="email" id="email" name="email" placeholder="Email address" required />
-										<input type="submit" id="sumbit" name="submit" class="btn btn-skin btn-lg hvr-pulse" style="margin:0 auto; display:inherit; margin-top:25px"/>
-									</form>
-									</div>
-									</div>
-								</div>
+						<div class="wow fadeInUp" data-wow-delay="0.1s">
+							<div class="cta-text">
+								<h3 style="text-align:center" class="changeFont white">SUBSCRIBE TO OUR NEWSLETTER</h3>
 							</div>
 						</div>
 					</div>
+					<div class="col-md-6 col-md-offset-3">
+						<div class="form-group">
+							<input class="form-control" type="email" id="email" name="email" placeholder="Email address" required />
+							<button id="emailButton" onclick="submitClick()" class="btn btn-skin btn-lg hvr-pulse" style="margin:0 auto; display:inherit; margin-top:25px"/>Submit</button>
+						</div>
+					</div>		
 				</div>
             </div>
 	</section>	
 
 	<footer>
-	
-
 		<div class="sub-footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-md-6 col-lg-6">
 					<ul class="social">
 						<li><a href="https://www.facebook.com/SPLT-235101410321885/"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://www.twitter.com/splitico"><i class="fa fa-twitter"></i></a></li>
 					</ul>
-				
 					<div class="wow fadeInLeft" data-wow-delay="0.1s">
 					<div class="text-left">
-					<p>&copy;Copyright - Spl/t. All rights reserved.</p>
+						<p>&copy; Copyright - Spl/t. All rights reserved.</p>
 					</div>
 					</div>
 				</div>
@@ -404,88 +383,336 @@
     <script src="js/custom.js"></script>
 	<script>
 	(function (e) {
-  e.fn.countdown = function (t, n) {
-  function i() {
-    eventDate = Date.parse(r.date) / 1e3;
-    currentDate = Math.floor(e.now() / 1e3);
-    if (eventDate <= currentDate) {
-      n.call(this);
-      clearInterval(interval)
-    }
-    seconds = eventDate - currentDate;
-    days = Math.floor(seconds / 86400);
-    seconds -= days * 60 * 60 * 24;
-    hours = Math.floor(seconds / 3600);
-    seconds -= hours * 60 * 60;
-    minutes = Math.floor(seconds / 60);
-    seconds -= minutes * 60;
-    days == 1 ? thisEl.find(".timeRefDays").text("day") : thisEl.find(".timeRefDays").text("days");
-    hours == 1 ? thisEl.find(".timeRefHours").text("hour") : thisEl.find(".timeRefHours").text("hours");
-    minutes == 1 ? thisEl.find(".timeRefMinutes").text("minute") : thisEl.find(".timeRefMinutes").text("minutes");
-    seconds == 1 ? thisEl.find(".timeRefSeconds").text("second") : thisEl.find(".timeRefSeconds").text("seconds");
-    if (r["format"] == "on") {
-      days = String(days).length >= 2 ? days : "0" + days;
-      hours = String(hours).length >= 2 ? hours : "0" + hours;
-      minutes = String(minutes).length >= 2 ? minutes : "0" + minutes;
-      seconds = String(seconds).length >= 2 ? seconds : "0" + seconds
-    }
-    if (!isNaN(eventDate)) {
-      thisEl.find(".days").text(days);
-      thisEl.find(".hours").text(hours);
-      thisEl.find(".minutes").text(minutes);
-      thisEl.find(".seconds").text(seconds)
-    } else {
-      alert("Invalid date. Example: 30 Tuesday 2013 15:50:00");
-      clearInterval(interval)
-    }
-  }
-  var thisEl = e(this);
-  var r = {
-    date: null,
-    format: null
-  };
-  t && e.extend(r, t);
-  i();
-  interval = setInterval(i, 1e3)
-  }
-  })(jQuery);
-  $(document).ready(function () {
-  function e() {
-    var e = new Date;
-    e.setDate(e.getDate() + 60);
-    dd = e.getDate();
-    mm = e.getMonth() + 1;
-    y = e.getFullYear();
-    futureFormattedDate = mm + "/" + dd + "/" + y;
-    return futureFormattedDate
-  }
-  $("#countdown").countdown({
-    date: "1 September 2017 09:00:00", // Change this to your desired date to countdown to
-    format: "on"
-  });
-});
+			e.fn.countdown = function (t, n) {
+			function i() {
+			eventDate = Date.parse(r.date) / 1e3;
+			currentDate = Math.floor(e.now() / 1e3);
+			if (eventDate <= currentDate) {
+			n.call(this);
+			clearInterval(interval)
+			}
+			seconds = eventDate - currentDate;
+			days = Math.floor(seconds / 86400);
+			seconds -= days * 60 * 60 * 24;
+			hours = Math.floor(seconds / 3600);
+			seconds -= hours * 60 * 60;
+			minutes = Math.floor(seconds / 60);
+			seconds -= minutes * 60;
+			days == 1 ? thisEl.find(".timeRefDays").text("day") : thisEl.find(".timeRefDays").text("days");
+			hours == 1 ? thisEl.find(".timeRefHours").text("hour") : thisEl.find(".timeRefHours").text("hours");
+			minutes == 1 ? thisEl.find(".timeRefMinutes").text("minute") : thisEl.find(".timeRefMinutes").text("minutes");
+			seconds == 1 ? thisEl.find(".timeRefSeconds").text("second") : thisEl.find(".timeRefSeconds").text("seconds");
+			if (r["format"] == "on") {
+			days = String(days).length >= 2 ? days : "0" + days;
+			hours = String(hours).length >= 2 ? hours : "0" + hours;
+			minutes = String(minutes).length >= 2 ? minutes : "0" + minutes;
+			seconds = String(seconds).length >= 2 ? seconds : "0" + seconds
+			}
+			if (!isNaN(eventDate)) {
+			thisEl.find(".days").text(days);
+			thisEl.find(".hours").text(hours);
+			thisEl.find(".minutes").text(minutes);
+			thisEl.find(".seconds").text(seconds)
+			} else {
+			alert("Invalid date. Example: 30 Tuesday 2013 15:50:00");
+			clearInterval(interval)
+			}
+		}
+		var thisEl = e(this);
+		var r = {
+			date: null,
+			format: null
+		};
+		t && e.extend(r, t);
+		i();
+		interval = setInterval(i, 1e3)
+		}
+		})(jQuery);
+		$(document).ready(function () {
+		function e() {
+			var e = new Date;
+			e.setDate(e.getDate() + 60);
+			dd = e.getDate();
+			mm = e.getMonth() + 1;
+			y = e.getFullYear();
+			futureFormattedDate = mm + "/" + dd + "/" + y;
+			return futureFormattedDate
+		}
+		$("#countdown").countdown({
+			date: "1 September 2017 09:00:00", // Change this to your desired date to countdown to
+			format: "on"
+		});
+	});
 </script>
 
 <script>
 	$(window).scroll(function(){				 
-	$('.container p').each(function(){
-    	var scrollTop     = $(window).scrollTop(),
-        	elementOffset = $(this).offset().top,
-       		distance      = (elementOffset - scrollTop),
-			    windowHeight  = $(window).height(),
-			    breakPoint    = windowHeight*0.9;
+		$('.container p').each(function(){
+			var scrollTop     = $(window).scrollTop(),
+				elementOffset = $(this).offset().top,
+				distance      = (elementOffset - scrollTop),
+					windowHeight  = $(window).height(),
+					breakPoint    = windowHeight*0.9;
 
-			if(distance > breakPoint) {
-				$(this).addClass("more-padding");	
-			}  if(distance < breakPoint) {
-				$(this).removeClass("more-padding");	
-			}
+				if(distance > breakPoint) {
+					$(this).addClass("more-padding");	
+				}  if(distance < breakPoint) {
+					$(this).removeClass("more-padding");	
+				}
+		});
 	});
-});
-
-
 </script>
-    
-</body>
+  
+<script>
+	(function($) {
+  var current = null;
 
+  $.modal = function(el, options) {
+    $.modal.close(); // Close any open modals.
+    var remove, target;
+    this.$body = $('body');
+    this.options = $.extend({}, $.modal.defaults, options);
+    this.options.doFade = !isNaN(parseInt(this.options.fadeDuration, 10));
+    if (el.is('a')) {
+      target = el.attr('href');
+      //Select element by id from href
+      if (/^#/.test(target)) {
+        this.$elm = $(target);
+        if (this.$elm.length !== 1) return null;
+        this.open();
+      //AJAX
+      } else {
+        this.$elm = $('<div>');
+        this.$body.append(this.$elm);
+        remove = function(event, modal) { modal.elm.remove(); };
+        this.showSpinner();
+        el.trigger($.modal.AJAX_SEND);
+        $.get(target).done(function(html) {
+          if (!current) return;
+          el.trigger($.modal.AJAX_SUCCESS);
+          current.$elm.empty().append(html).on($.modal.CLOSE, remove);
+          current.hideSpinner();
+          current.open();
+          el.trigger($.modal.AJAX_COMPLETE);
+        }).fail(function() {
+          el.trigger($.modal.AJAX_FAIL);
+          current.hideSpinner();
+          el.trigger($.modal.AJAX_COMPLETE);
+        });
+      }
+    } else {
+      this.$elm = el;
+      this.open();
+    }
+  };
+
+  $.modal.prototype = {
+    constructor: $.modal,
+
+    open: function() {
+      var m = this;
+      if(this.options.doFade) {
+        this.block();
+        setTimeout(function() {
+          m.show();
+        }, this.options.fadeDuration * this.options.fadeDelay);
+      } else {
+        this.block();
+        this.show();
+      }
+      if (this.options.escapeClose) {
+        $(document).on('keydown.modal', function(event) {
+          if (event.which == 27) $.modal.close();
+        });
+      }
+      if (this.options.clickClose) this.blocker.click($.modal.close);
+    },
+
+    close: function() {
+      this.unblock();
+      this.hide();
+      $(document).off('keydown.modal');
+    },
+
+    block: function() {
+      var initialOpacity = this.options.doFade ? 0 : this.options.opacity;
+      this.$elm.trigger($.modal.BEFORE_BLOCK, [this._ctx()]);
+      this.blocker = $('<div class="jquery-modal blocker"></div>').css({
+        top: 0, right: 0, bottom: 0, left: 0,
+        width: "100%", height: "100%",
+        position: "fixed",
+        zIndex: this.options.zIndex,
+        background: this.options.overlay,
+        opacity: initialOpacity
+      });
+      this.$body.append(this.blocker);
+      if(this.options.doFade) {
+        this.blocker.animate({opacity: this.options.opacity}, this.options.fadeDuration);
+      }
+      this.$elm.trigger($.modal.BLOCK, [this._ctx()]);
+    },
+
+    unblock: function() {
+      if(this.options.doFade) {
+        this.blocker.fadeOut(this.options.fadeDuration, function() {
+          this.remove();
+        });
+      } else {
+        this.blocker.remove();
+      }
+    },
+
+    show: function() {
+      this.$elm.trigger($.modal.BEFORE_OPEN, [this._ctx()]);
+      if (this.options.showClose) {
+        this.closeButton = $('<a href="#close-modal" rel="modal:close" class="close-modal">' + this.options.closeText + '</a>');
+        this.$elm.append(this.closeButton);
+      }
+      this.$elm.addClass(this.options.modalClass + ' current');
+      this.center();
+      if(this.options.doFade) {
+        this.$elm.fadeIn(this.options.fadeDuration);
+      } else {
+        this.$elm.show();
+      }
+      this.$elm.trigger($.modal.OPEN, [this._ctx()]);
+    },
+
+    hide: function() {
+      this.$elm.trigger($.modal.BEFORE_CLOSE, [this._ctx()]);
+      if (this.closeButton) this.closeButton.remove();
+      this.$elm.removeClass('current');
+
+      if(this.options.doFade) {
+        this.$elm.fadeOut(this.options.fadeDuration);
+      } else {
+        this.$elm.hide();
+      }
+      this.$elm.trigger($.modal.CLOSE, [this._ctx()]);
+    },
+
+    showSpinner: function() {
+      if (!this.options.showSpinner) return;
+      this.spinner = this.spinner || $('<div class="' + this.options.modalClass + '-spinner"></div>')
+        .append(this.options.spinnerHtml);
+      this.$body.append(this.spinner);
+      this.spinner.show();
+    },
+
+    hideSpinner: function() {
+      if (this.spinner) this.spinner.remove();
+    },
+
+    center: function() {
+      this.$elm.css({
+        position: 'fixed',
+        top: "50%",
+        left: "50%",
+        marginTop: - (this.$elm.outerHeight() / 2),
+        marginLeft: - (this.$elm.outerWidth() / 2),
+        zIndex: this.options.zIndex + 1
+      });
+    },
+
+    //Return context for custom events
+    _ctx: function() {
+      return { elm: this.$elm, blocker: this.blocker, options: this.options };
+    }
+  };
+
+  //resize is alias for center for now
+  $.modal.prototype.resize = $.modal.prototype.center;
+
+  $.modal.close = function(event) {
+    if (!current) return;
+    if (event) event.preventDefault();
+    current.close();
+    var that = current.$elm;
+    current = null;
+    return that;
+  };
+
+  $.modal.resize = function() {
+    if (!current) return;
+    current.resize();
+  };
+  
+  // Returns if there currently is an active modal
+  $.modal.isActive = function () {
+    return current ? true : false;
+  }  
+
+  $.modal.defaults = {
+    overlay: "#000",
+    opacity: 0.75,
+    zIndex: 1,
+    escapeClose: true,
+    clickClose: true,
+    closeText: 'Close',
+    modalClass: "modal",
+    spinnerHtml: null,
+    showSpinner: true,
+    showClose: true,
+    fadeDuration: null,   // Number of milliseconds the fade animation takes.
+    fadeDelay: 1.0        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
+  };
+
+  // Event constants
+  $.modal.BEFORE_BLOCK = 'modal:before-block';
+  $.modal.BLOCK = 'modal:block';
+  $.modal.BEFORE_OPEN = 'modal:before-open';
+  $.modal.OPEN = 'modal:open';
+  $.modal.BEFORE_CLOSE = 'modal:before-close';
+  $.modal.CLOSE = 'modal:close';
+  $.modal.AJAX_SEND = 'modal:ajax:send';
+  $.modal.AJAX_SUCCESS = 'modal:ajax:success';
+  $.modal.AJAX_FAIL = 'modal:ajax:fail';
+  $.modal.AJAX_COMPLETE = 'modal:ajax:complete';
+
+  $.fn.modal = function(options){
+    if (this.length === 1) {
+      current = new $.modal(this, options);
+    }
+    return this;
+  };
+
+  // Automatically bind links with rel="modal:close" to, well, close the modal.
+  $(document).on('click.modal', 'a[rel="modal:close"]', $.modal.close);
+  $(document).on('click.modal', 'a[rel="modal:open"]', function(event) {
+    event.preventDefault();
+    $(this).modal();
+  });
+})(jQuery);
+
+$('a').click(function(event) {
+  event.preventDefault();
+  $(this).modal();
+});
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDBIcplooBVV5gmulXz-bbKmheflNi7ezk",
+    authDomain: "splitico.firebaseapp.com",
+    databaseURL: "https://splitico.firebaseio.com",
+    projectId: "splitico",
+    storageBucket: "splitico.appspot.com",
+    messagingSenderId: "952000288227"
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+	var email = document.getElementById('email');
+	var submitButton = document.getElementById('emailButton');
+
+	function submitClick() {
+		var firebaseRef = firebase.database().ref();
+		var emailInput = email.value;
+		firebaseRef.push().set(emailInput);
+	}
+</script>
+  
+</body>
 </html>
